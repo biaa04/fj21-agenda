@@ -1,4 +1,4 @@
-package ConnectorFactory;
+package contatodao;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -15,6 +15,7 @@ public class TestaConeccao {
 			Connection con = new ConnectorFactory().getConnection();
 		      System.out.println("Conexão aberta!");
 		      connection.close();
+		      
 		
 	}
 

@@ -1,4 +1,4 @@
-package br.com.caelum.agenda.servlet;
+package br.com.caelum.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -18,7 +18,10 @@ import contatoexc.Contato;
 
 @WebServlet("/adicionaContato")
 public class AdicionaContatoServlet extends HttpServlet {
-    protected void service(HttpServletRequest request,
+
+	//private static final long serialVersionUID = 1L;
+
+	protected void service(HttpServletRequest request,
             HttpServletResponse response)
             throws IOException, ServletException {
         // busca o writer
@@ -28,8 +31,7 @@ public class AdicionaContatoServlet extends HttpServlet {
         String nome = request.getParameter("nome");
         String endereco = request.getParameter("endereco");
         String email = request.getParameter("email");
-        String dataEmTexto = request
-                .getParameter("dataNascimento");
+        String dataEmTexto = request.getParameter("dataNascimento");
         Calendar dataNascimento = null;
 
         // fazendo a conversão da data
